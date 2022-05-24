@@ -1,0 +1,40 @@
+<mat-nav-list>
+  <div class="profile-card">
+    <img  style="width: 50%;height: 50%;" src="assets/images/bsmart.jpg" alt="profile">
+    <div class="header">
+      <h5 style="padding: 2%;font-family: Arial;font-style: italic;font-weight: bold;
+      text-shadow: 4px 4px 5px rgb(255, 0, 212);"> GROWTH HACKING FACTORY</h5>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Accueil</h2>
+  <a mat-list-item routerLinkActive="active" routerLink="/admin/newdigiplan">
+    <mat-icon>import_contacts</mat-icon>
+    Dossiers
+  </a>
+  <a mat-list-item routerLinkActive="active"   routerLink="/admin/listplateforme">
+    <mat-icon>dashboard</mat-icon> Plateforme
+  </a>
+ <!--  *ngIf="var_login=='digiplan'"
+  *ngIf="var_login=='digiplan'" -->
+  <a mat-list-item routerLinkActive="active"   routerLink="/admin/option">
+    <mat-icon>alt_route</mat-icon> add Options
+  </a> 
+</mat-nav-list>
+
+
+  <!-- <mat-divider></mat-divider>
+
+  <h2 matSubheader>Paramètres</h2>
+ 
+  <a mat-list-item routerLinkActive="active" routerLink="/contacts">
+    <mat-icon>contact_phone</mat-icon>
+    Contacts
+  </a>
+  <mat-divider></mat-divider>
+  <a mat-list-item routerLinkActive="active" routerLink="/faq">
+    <mat-icon>help</mat-icon>
+    FAQ
+  </a>  -->

@@ -1,0 +1,27 @@
+<div class="container" style="width: 100%;">
+    <div class="panel panel-success" >
+        <div class="panel-heading" >
+            <h2>Formulaire de Modification</h2>
+        </div>
+            <div class="panel-body">
+                <form [formGroup]="firstFormGroup">
+                    <mat-form-field style=" width: 30%;" >
+                        <mat-label >Nom:</mat-label>
+                        <br> <input matInput type="text" required formControlName="nom" name="nom">
+                        </mat-form-field><br/>
+                        <mat-form-field  style=" width: 87%;" appearance="fill" >
+                            <mat-label>Heure de poste :</mat-label>
+                            <textarea rows="1" matInput formControlName="heurepost" name="heurepost" ></textarea>
+                          </mat-form-field> <br/>
+                          <mat-form-field style=" width: 87%;" appearance="fill">
+                            <mat-label>Format :</mat-label>
+                            <textarea rows="7" matInput formControlName="format" name="format" ></textarea>
+                          </mat-form-field> 
+                    <div style="margin-left: 40%;">
+                        <button mat-button   class="btn btn-danger" mat-dialog-close>annuler</button>
+                        <button  mat-button mat-dialog-close type="submit"  style="margin-left: 2%; " class="btn btn-success" (click)="updatePlateforme()">Enregistrer</button>
+                    </div>
+                </form>  
+            </div>
+        </div> 
+</div>

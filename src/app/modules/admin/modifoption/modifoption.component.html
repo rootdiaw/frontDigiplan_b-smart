@@ -1,0 +1,26 @@
+<div class="container" style="width: 100%;">
+    <div class="panel panel-success" >
+        <div class="panel-heading" >
+            <h2>Formulaire de Modification</h2>
+        </div>
+            <div class="panel-body">
+                <form [formGroup]="firstFormGroup">
+                    <mat-form-field>
+                        <mat-label >objectif macron</mat-label>
+                        <input  type="text" matInput  required formControlName="objectifmacrom" name="objectifmacrom" >
+                      </mat-form-field>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Plateforme</mat-label>
+                        <mat-select formControlName="plateformes" required multiple>
+                          <mat-option   *ngFor="let plateforme of listePlateformes" [value]="plateforme" >{{plateforme.nom}}</mat-option>
+                          </mat-select>
+                          </mat-form-field>
+                          <div style="margin-left: 17%;">
+                        <button mat-button   class="btn btn-danger" mat-dialog-close>annuler</button>
+                        <button  mat-button mat-dialog-close type="submit"  style="margin-left: 2%; "
+                         class="btn btn-success" (click)="updateOption()">Enregistrer</button>
+                    </div>
+                </form>  
+            </div>
+        </div> 
+</div>

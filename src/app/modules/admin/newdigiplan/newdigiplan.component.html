@@ -1,0 +1,41 @@
+<div class="animated fadeIn" class="animated fadeIn" style="width: 40%; height: 90%;;text-align: center; margin-left: 30%;">
+    <div class="card">
+        <div class="card-header">
+            <h2>DIGIPLAN</h2>
+            <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+          </div>
+        <div class="card-body">
+            <form [formGroup]="firstFormGroup">
+
+                      <mat-form-field >
+                        <mat-label >Sexe *:</mat-label>
+                        <mat-select matNativeControl formControlName="sexe" multiple> 
+                              <mat-option value="M,F">Masculin, Féminin </mat-option>
+                              <mat-option value="m">Masculin </mat-option>
+                              <mat-option value="F">Féminin </mat-option>                             
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field >
+                        <mat-label >Age *:</mat-label>
+                        <mat-select matNativeControl formControlName="age" multiple> 
+                              <mat-option value="15 - 29 ans">15 - 29 ans </mat-option>
+                              <mat-option value="30 - 44 ans">30 - 44 ans </mat-option>
+                              <mat-option value="45 - 60 ans">45 - 60 ans </mat-option>                             
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Objectif Macrom :</mat-label>
+                        <mat-select formControlName="objectifmacroms" required multiple #plateform>
+                          <mat-option   *ngFor="let objectifmacrom of listOption" [value]="objectifmacrom" >{{objectifmacrom.objectifmacrom}}</mat-option>
+                          </mat-select>
+                          </mat-form-field>
+                    <div>
+                        <button mat-button [disabled]="plateform.value.length == 0" class="btn-success" (click)="genererPlateform()">Generer Plateform</button>
+                    </div>
+                 
+                      </form>
+    </div>             
+    </div>
+</div>
+
+

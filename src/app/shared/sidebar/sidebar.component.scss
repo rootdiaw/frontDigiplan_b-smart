@@ -1,0 +1,26 @@
+:host {
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  .profile-card {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+.active{
+  border-left: 10px solid #c607a6;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+
+.h5{
+  padding: 2%;font-family: Arial;font-style: italic;font-weight: bold;text-shadow: 4px 4px 5px rgb(255, 0, 212);
+}

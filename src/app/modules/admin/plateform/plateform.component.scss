@@ -1,0 +1,30 @@
+.example-container {
+    height: 400px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+    
+  }th{
+    background-color: rgb(62, 56, 66);
+    font-size: large;
+    color: white;
+  }
+  td{
+    font-size: 115%;
+  }
+  mat-dialog-actions{
+      height: -10%;
+  }
+
+  h1{
+      text-align: center;
+      color: green;
+  }
+
+  button{
+    margin-left: 45%;
+    background-color: red ;
+    color: white;
+  }

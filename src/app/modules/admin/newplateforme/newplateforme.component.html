@@ -1,0 +1,29 @@
+<div class="container" style="width: 70%;">
+    <div class="panel panel-success" >
+        <div class="panel-heading" >
+            <h2>Ajouter une PLATEFROME</h2>
+            <p *ngIf="message!=null" style="color: red;font-size: 12pt; text-align: center;">{{message}}</p>
+        </div>
+            <div class="panel-body">
+                <form [formGroup]="firstFormGroup">
+                    <mat-form-field style=" width: 30%;" >
+                        <mat-label >Nom:</mat-label>
+                        <br> <input matInput type="text" required formControlName="nom" name="nom">
+                        </mat-form-field><br/>
+                        <mat-form-field  style=" width: 87%;" appearance="fill" >
+                            <mat-label>Heure de poste :</mat-label>
+                            <textarea rows="2" required matInput formControlName="heurepost" name="heurepost" ></textarea>
+                          </mat-form-field> <br/>
+                          <mat-form-field style=" width: 87%;" appearance="fill">
+                            <mat-label>Format :</mat-label>
+                            <textarea rows="5" maxlength="254" required matInput formControlName="format" name="format" #lib></textarea>
+                                <span style="color: red;font-size: 12pt;">Taille Max du format: 255</span>
+                          </mat-form-field> 
+                    <div style="margin-left: 35%;">
+                        <button mat-button   class="btn btn-danger" [routerLink]="['/admin/listplateforme']"  >annuler</button>
+                        <button  mat-button type="submit"  style="margin-left: 2%; " class="btn btn-success" (click)="savePlateforme()">Enregistrer</button>
+                    </div>
+                </form>  
+            </div>
+        </div> 
+</div>
